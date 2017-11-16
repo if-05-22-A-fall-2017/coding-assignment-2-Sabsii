@@ -20,8 +20,8 @@ grandfather(X,Y) :- grandparent(X,Y),male(X).
 grandmother(X,Y) :- grandparent(X,Y),female(X).
 father(X,Y) :- parent(X,Y),male(X).
 mother(X,Y) :- parent(X,Y),female(X).
-son(Y,X) :- parent(X,Y),male(X).
-daughter(Y,X) :- parent(X,Y),female(X).
+son(Y,X) :- parent(X,Y),male(Y).
+daughter(Y,X) :- parent(X,Y),female(Y).
 sibling(X,Y) :- parent(Z,X),parent(Z,Y).
 brother(X,Y):- sibling(X,Y),male(X)
 sister(X,Y):- sibling(X,Y),female(X).
